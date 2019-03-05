@@ -56,6 +56,11 @@ public class MapViewManager extends ViewGroupManager<MapView> {
         return mapView;
     }
 
+    @ReactProp(name = "indoorEnable")
+    public void setZoomControlsVisible(MapView mapView, boolean indoorEnable) {
+        mapView.getMap().setIndoorEnable(indoorEnable);
+    }
+    
     @ReactProp(name = "zoomControlsVisible")
     public void setZoomControlsVisible(MapView mapView, boolean zoomControlsVisible) {
         mapView.showZoomControls(zoomControlsVisible);
